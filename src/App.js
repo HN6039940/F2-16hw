@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Form from './Form'
+import List from './List'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// これをList.jsに各項を挿入する。
+const todo =[
+    "起きる",
+    "ご飯を食べる",
+    "お風呂に入る",
+    "寝る"
+]
+    const App = ()=>{
+        return(
+            // <React.Fragment>
+            <>
+            <Form/>
+            <List todo={todo}/>
+            </>
+            /* <React.Fragment/> */
+    )
 }
-
-export default App;
+export default App
