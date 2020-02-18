@@ -1,20 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Form from './Form'
 import List from './List'
 
 // これをList.jsに各項を挿入する。
-const todo =[
-    "起きる",
-    "ご飯を食べる",
-    "お風呂に入る",
-    "寝る"
-]
-    const App = ()=>{
+const App = ()=>{
+        const [todo,setTodos] = useState(
+        [
+            {note:"起きる"},
+            {note:"ご飯を食べる"},
+            {note:"お風呂に入る"},
+            {note:"寝る"}
+        ])
+        console.log(todo)
+        const todosAction = todo.map(action=>action.note)
+        console.log(todosAction)
+        
         return(
             // <React.Fragment>
             <>
-            <Form/>
-            <List todo={todo}/>
+            <Form setTodos={setTodos} todo={todo}/>
+            <List todo={todosAction}/>
             </>
             /* <React.Fragment/> */
     )
