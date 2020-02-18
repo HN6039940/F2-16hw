@@ -30,5 +30,4 @@ const Form = ({setTodos,todo})=>{
 
     )
 }
-
 export default Form
