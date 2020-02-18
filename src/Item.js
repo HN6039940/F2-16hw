@@ -7,5 +7,4 @@ const Item = ({todo}) => {
       </>
    )
 } 
-
 export default Item
